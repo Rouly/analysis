@@ -1,0 +1,16 @@
+# ── 核心（Mock 模式即可运行）────────────────────────
+websockets>=12.0
+
+# ── Real 模式：音频采集 + 中文转写/声纹（Windows）──────
+# 需要时取消注释并安装：
+# pyaudiowpatch>=0.2.12        # WASAPI loopback 双路采集
+# funasr>=1.1.0               # 中文流式转写 + 声纹 + VAD
+# modelscope>=1.18.0          # FunASR 模型下载
+# torch>=2.1.0                # 推理后端（CPU 亦可，建议 GPU）
+# torchaudio>=2.1.0
+# numpy>=1.24
+# soundfile>=0.12
+
+# ── 可选：云端大模型复盘分析 ──────────────────────────
+# openai>=1.0       # 兼容 DeepSeek / 通义 / 本地 Ollama
+# anthropic>=0.39   # Claude

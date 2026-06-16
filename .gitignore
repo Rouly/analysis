@@ -1,0 +1,24 @@
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+
+# 构建产物
+build/
+dist/
+*.spec.bak
+
+# 本地数据（含声纹/会话，绝不入库）
+data/
+*.db
+
+# 模型缓存
+models/
+
+# 环境/密钥
+.env
+*.key
+
+# 系统
+.DS_Store
+Thumbs.db

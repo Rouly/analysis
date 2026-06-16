@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>销售复盘助手</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">◆</span>
+      <span>销售复盘助手</span>
+      <span id="modeBadge" class="badge">…</span>
+    </div>
+    <div class="conn">
+      <span id="dot" class="dot off"></span>
+      <span id="connText">未连接</span>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <button id="btnStart" class="btn primary">● 开始记录</button>
+    <button id="btnStop" class="btn" disabled>■ 停止</button>
+    <button id="btnClear" class="btn ghost">清空</button>
+    <div class="spacer"></div>
+    <div class="voiceprint">
+      <span id="vpStatus" class="vp-status">声纹：未注册</span>
+      <button id="btnEnroll" class="btn small ghost">注册我的声纹</button>
+    </div>
+    <button id="btnSuggest" class="btn ghost">💡 实时应答：关</button>
+    <button id="btnAnalyze" class="btn accent">⚡ 生成复盘</button>
+  </div>
+
+  <div id="suggestBar" class="suggest-bar hidden">
+    <span class="sg-label">💡 建议应答</span>
+    <span id="suggestText" class="sg-text"></span>
+  </div>
+
+  <main class="layout">
+    <!-- 左：实时对话流 -->
+    <section class="panel chat">
+      <div class="panel-title">实时对话<span class="hint">蓝＝我 · 灰＝客户</span></div>
+      <div id="chat" class="chat-flow">
+        <div class="empty">点击「开始记录」后，对话会实时出现在这里。</div>
+      </div>
+    </section>
+
+    <!-- 右：复盘分析 + 问答 -->
+    <section class="panel analysis">
+      <div class="panel-title">复盘分析</div>
+      <div id="analysis" class="analysis-body">
+        <div class="empty">记录结束后点「生成复盘」，这里会显示客户异议、我的承诺、成交信号与话术建议。</div>
+      </div>
+      <div class="qa">
+        <input id="qaInput" type="text" placeholder="问一下：客户对价格什么态度？我答应了什么？" />
+        <button id="btnAsk" class="btn small">问</button>
+      </div>
+      <div id="qaAnswer" class="qa-answer"></div>
+    </section>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
