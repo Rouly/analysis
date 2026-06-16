@@ -7,7 +7,7 @@
     "start": "electron .",
     "backend": "python backend/server.py",
     "build:backend": "pyinstaller backend/server.spec --distpath build/backend --workpath build/tmp -y",
-    "dist": "electron-builder --win"
+    "dist": "electron-builder --win --publish never"
   },
   "author": "Rouly",
   "license": "UNLICENSED",
